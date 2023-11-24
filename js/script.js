@@ -21,7 +21,7 @@ let contentPage = document.getElementById('container-member');
 // Ogni membro è caratterizzato dalle seguenti informazioni: nome, ruolo e foto.
 
 const team = [
-    { nome: 'Wayne Barnett', ruolo: 'Founder & CEO', foto: 'wayne-barnett-founder-ceo.jpg' },
+    { nome: 'Wayne Barnett', ruolo: 'Founder & CEO', foto: '../img/wayne-barnett-founder-ceo.jpg' },
     { nome: 'Angela Caroll', ruolo: 'Chief Editor', foto: 'angela-caroll-chief-editor.jpg' },
     { nome: 'Walter Gordon', ruolo: 'Office Manager', foto: 'walter-gordon-office-manager.jpg' },
     { nome: 'Angela Lopez', ruolo: 'Social Media Manager', foto: 'angela-lopez-social-media-manager.jpg' },
@@ -42,16 +42,46 @@ const team = [
 
 // Stampare le stesse informazioni su DOM sottoforma di stringhe
 
+// for (let i = 0; i < team.length; i++) {
+
+//     const member = team[i];
+
+//     const memberInfo = document.createElement('p');
+
+//     memberInfo.textContent = `
+//         Nome: ${member.nome}, 
+//         Ruolo: ${member.ruolo}, 
+//         Foto: ${member.foto}`;
+
+//     contentPage.appendChild(memberInfo);
+// }
+
+
+
+
+
+// Trasformare la stringa foto in una immagine effettiva
 for (let i = 0; i < team.length; i++) {
 
     const member = team[i];
 
-    const memberInfo = document.createElement('p');
+    const memberInfo = document.createElement('div');
 
-    memberInfo.textContent = `Nome: ${member.nome}, Ruolo: ${member.ruolo}, Foto: ${member.foto}`;
+    const foto = document.createElement('img');
+    foto.src = member.foto;
+    foto.alt = `${member.nome} image`;
+
+    const nome = document.createElement('p');
+    nome.textContent = `Nome: ${member.nome}`;
+
+    const ruolo = document.createElement('p');
+    ruolo.textContent = `Ruolo: ${member.ruolo}`;
+
+    
+
+    memberInfo.appendChild(nome);
+    memberInfo.appendChild(ruolo);
+    memberInfo.appendChild(foto);
 
     contentPage.appendChild(memberInfo);
 }
-
-
-// Trasformare la stringa foto in una immagine effettiva
