@@ -11,6 +11,7 @@ body{
 header{
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -20,6 +21,11 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 1rem;
+}
+
+h2{
+    margin-bottom: .5rem;
 }
 
 main{
@@ -37,17 +43,17 @@ main{
     align-items: center;
 }
 
-.container-member > p{
+p{
     width: calc(100% / 3) - 2rem;
-    font-size: 1rem;
-    margin-bottom: 1rem;
+    font-size: .8rem;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 1.5rem;
     display: flex;
     flex-direction: column;
 }
 
 .container-member > div{
     width: calc(( 100% / 3 ) - 2rem);
-    border: 1px solid greenyellow;
     display: flex;
     flex-direction: column-reverse;
     justify-content: center;
@@ -55,7 +61,7 @@ main{
 }
 
 img{
-    width: 200px;
+    width: 270px;
     height: 300px;
-    
+    margin-bottom: .5rem;
 }
